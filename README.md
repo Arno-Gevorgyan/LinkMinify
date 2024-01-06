@@ -20,7 +20,7 @@ LinkMinify: URL Shortening Service Overview LinkMinify is a simple yet powerful 
 ├── messages.py ········· errors and success messages for responses
 ├── README.md ··········· you're here
 ├── requirements.txt
-│── Dockerfile ······· Setup
+│── Dockerfile ·······    Setup
 │── docker-compose.yaml 
 ├── services
 │  ├── users.py ········· users logic

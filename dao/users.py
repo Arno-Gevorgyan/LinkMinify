@@ -4,8 +4,8 @@ from uuid import UUID
 from sqlalchemy import select
 from sqlalchemy.ext.asyncio import AsyncSession
 
-from db.models import UserModel
 from dao.base import BaseDAO
+from db.models import UserModel
 
 
 class UserDAO(BaseDAO[UserModel]):
@@ -19,11 +19,11 @@ class UserDAO(BaseDAO[UserModel]):
 
         if uuid:
             query = await self.session.execute(
-                select(UserModel).where(UserModel.uuid == uuid)
+                select(self.model).where(self.model.uuid == uuid)
             )
         else:
             query = await self.session.execute(
-                select(UserModel).where(UserModel.email == email)
+                select(self.model).where(self.model.email == email)
             )
 
         return query.scalar_one_or_none()
