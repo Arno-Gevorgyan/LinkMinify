@@ -1,10 +1,8 @@
-from pydantic.networks import HttpUrl
-
 from schemas.base import BaseSchema
 
 
 class LinkCreateRequest(BaseSchema):
-    full_url: HttpUrl
+    full_url: str
 
 
 class LinkCreateResponse(BaseSchema):

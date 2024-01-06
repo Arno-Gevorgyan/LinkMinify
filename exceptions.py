@@ -75,3 +75,11 @@ class EmailUsed(WrongData):
 
 class EmailIncorrect(WrongData):
     DETAIL = ErrorMessages.INCORRECT_EMAIL
+
+
+class UrlIncorrect(WrongData):
+    DETAIL = ErrorMessages.NOT_A_VALID_URL
+
+
+class SHORT_URL_NOT_FOUND(NotFound):
+    DETAIL = ErrorMessages.SHORT_URL_NOT_FOUND

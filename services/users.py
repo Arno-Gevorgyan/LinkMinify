@@ -67,7 +67,6 @@ async def get_current_user(
         token: str = Depends(oauth2_scheme),
 ) -> UserModel:
     """Getting current user by token"""
-
     return await user_from_token(
         token=token, session=session
     )

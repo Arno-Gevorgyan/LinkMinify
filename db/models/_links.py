@@ -10,7 +10,7 @@ class ShortLinkModel(Base, UUIDField, DateFields):
     __tablename__ = "short_links"
 
     short_url: so.Mapped[str] = so.mapped_column(
-        sa.String(length=25), index=True, unique=True,  nullable=False
+        sa.String(length=30), index=True, unique=True,  nullable=False
     )
     full_url: so.Mapped[str] = so.mapped_column(
         sa.String(length=2000), index=True, unique=True, nullable=False
